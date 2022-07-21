@@ -9,25 +9,91 @@
     <link rel="stylesheet" href="index.css" />
 
     <style>
-      /* * {
-        border: 1px solid black;
-      } */
-    </style>
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: x-large;
+        color: var(--primary-color);
+        margin: 0rem 0rem;
+      }
+      h3 {
+        font-weight: 400;
+        margin: 0rem 0rem;
+      }
 
-    <title>Arif Demirkan</title>
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+      }
+
+      .timed-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin: 0rem;
+      }
+
+      .timed-element > .time-period {
+        color: var(--alt-text-color);
+        font-size: 0.9rem;
+        font-style: italic;
+        text-align: right;
+      }
+
+      section > ul.section-entries {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding-left: 0px;
+        gap: 3rem;
+      }
+
+      ul.section-entries > li > ul {
+        list-style-type: disc;
+      }
+
+      ul.section-entries > li > ul > li {
+        margin: 0.4rem;
+        color: var(--alt-text-color);
+      }
+
+      @media screen and (max-width: 600px) {
+        h2 {
+          font-size: large;
+        }
+
+        h3 {
+          font-size: medium;
+        }
+
+        .timed-element {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 0rem;
+          margin: 0rem;
+        }
+      }
+    </style>
+    <title>Arif's Portfolio</title>
   </head>
 
   <body>
     <header>
       <!--Logo placeholder-->
-      <a href="index.html" title="Back to Homepage">Arif Demirkan</a>
+      <a href="index.html" title="Back to Homepage" id="logo">Arif Demirkan</a>
 
       <!-- Navbar -->
       <nav>
-        <ul>
+        <ul id="menu-items">
           <li><a href="index.html"> Home </a></li>
           <li><a href="portfolio.html">My Work</a></li>
-          <li><a href="lab.html"> Lab (only for assignment) </a></li>
+          <li><a href="mailto:ademirkan@ucsd.edu"> Contact Me </a></li>
         </ul>
       </nav>
     </header>
@@ -35,65 +101,151 @@
     <main>
       <!-- Academic History -->
       <section>
-        <h1>🏫Education</h1>
-        <h2>University of California, San Diego</h2>
-        <span class="time-period">Expected 2023</span>
-        <ul>
-          <li>3.65 GPA</li>
-          <li>Technical Breadth: UI/UX</li>
+        <h1>🎓 &nbsp;Education</h1>
+        <ul class="section-entries">
+          <li>
+            <div class="timed-element">
+              <h2>University of California, San Diego</h2>
+              <span class="time-period">Expected 2023</span>
+            </div>
+            <h3>Computer Science BS</h3>
+            <ul>
+              <li>3.65 GPA</li>
+              <li>Revelle Povost Honors</li>
+              <li>Technical Breadth: UI/UX</li>
+            </ul>
+          </li>
         </ul>
       </section>
 
       <!-- Work History -->
       <section>
-        <h1>💼 Experience</h1>
-        <h2>Fullstack Engineer Intern</h2>
-        <h3>CounselHero</h3>
-        <span class="time-period"> 06/2022 - 09/2022 (expected)</span>
-        <ul>
-          <li>Expanded backend to hold ranking data of ~2000 universities</li>
-          <li>
-            Optimized UI/UX of long load times for users with poor internet
-          </li>
-          <li>[put new stuff here ]</li>
-        </ul>
+        <h1>💼 &nbsp;Experience</h1>
 
-        <h2>Front-End OpenSource Contributor</h2>
-        <h3>Monkeytype</h3>
-        <span class="time-period"> [ Near future ]</span>
-        <ul>
+        <ul class="section-entries">
+          <!-- COUNSEL HERO -->
           <li>
-            Expanded UI library impacting ~50k weekly users for investing
-            platform using HTML5 and Typescript
+            <div class="timed-element">
+              <h2>Fullstack Developer, Intern</h2>
+              <span class="time-period"> 06/2022 - 09/2022</span>
+            </div>
+            <h3>CounselHero</h3>
+            <ul>
+              <li>
+                Expanded backend database to hold ranking data of ~2000
+                universities
+              </li>
+              <li>
+                Optimized UI/UX of long load times for users with poor internet
+              </li>
+              <li>[put new stuff here ]</li>
+            </ul>
           </li>
-          <li>[ put new stuff here ]</li>
+
+          <!-- MONKEYTYPE -->
+          <li>
+            <div class="timed-element">
+              <h2>Frontend Developer, Contributer</h2>
+              <span class="time-period"> 08/2022 - Present </span>
+            </div>
+
+            <h3>Monkeytype</h3>
+            <ul>
+              <li>
+                Expanded opensource UI library, impacting ~50k weekly users for
+                typing platform using HTML5 and Typescript
+              </li>
+              <li>Created ...</li>
+            </ul>
+          </li>
         </ul>
       </section>
 
       <!-- Personal Projects -->
       <section>
-        <h1>🦾Personal Projects</h1>
+        <h1>📦 &nbsp;Projects</h1>
 
-        <h2>Deepflow</h2>
-        <h3>
-          Productivity timer that tracks focus, efficiency, and time in flow
-          state
-        </h3>
-        <span class="time-period"> 05/2022 - Present </span>
-
-        <h2>minimalyoutube</h2>
-        <h3>Youtube API that connects</h3>
-        <span class="time-period"> [ Near Future ] </span>
-
-        <h2>... and more in the pipeline!</h2>
-        <ol>
+        <ul class="section-entries">
+          <!-- Deepflow -->
           <li>
-            FairChess -- cheater detection extension for chess.com that notifies
-            you of suspicious opponent before your first move
+            <div class="timed-element">
+              <h2>Deepflow</h2>
+              <span class="time-period"> 05/2022 - Present </span>
+            </div>
+            <h3>
+              Productivity timer that tracks focus, efficiency, and time in flow
+              state
+            </h3>
+            <ul>
+              <li>
+                Developed webapp that allows user to track and improve
+                productivity using modern JavaScript and React
+              </li>
+              <li>Designed and implemented clean, minimal UI in Figma</li>
+              <li>
+                Created React custom hooks to abstract reusable timer logic
+              </li>
+              <li>
+                Maintained user preferences and session state using React’s
+                Context API, persisted using local storage
+              </li>
+              <li>
+                Utilized Solid design patterns to create reusable components and
+                well documented APIs — particularly Separation of Concerns and
+                Open-closed principle
+              </li>
+            </ul>
           </li>
-          <li>Two Day Rule -- habit accountability app</li>
-          <li>...</li>
-        </ol>
+
+          <!-- Minimal Youtube -->
+          <li>
+            <div class="timed-element">
+              <h2>Minimalyoutube</h2>
+              <span class="time-period"> (Near future) </span>
+            </div>
+
+            <h3>Youtube... without the distractions</h3>
+            <ul>
+              <li>
+                Utilized API to query and fetch results from Youtube backend
+              </li>
+              <li>Enabled user login with Google Account API</li>
+              <li>Added user "watch later" list in Firebase backend</li>
+            </ul>
+          </li>
+
+          <!-- FairChess -->
+          <li>
+            <div class="timed-element">
+              <h2>FairChess</h2>
+              <span class="time-period"> (Near future) </span>
+            </div>
+
+            <h3>Chrome extension for chess.com that ensures fair play</h3>
+            <ul>
+              <li>
+                Developed chrome extension for chess.com that notifies user of
+                suspicious opponents before first move.
+              </li>
+              <li>
+                Developed algorithm that retrieves and processes opponents
+                recent winrates and accuracy
+              </li>
+              <li>
+                Popup notifies user of suspicous opponents before first move is
+                played (within &le;500ms)
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>... and many more in the pipeline!</h2>
+            <!-- <ul>
+              <li>Two Day Rule -- habit accountability app</li>
+              <li>...</li>
+            </ul> -->
+          </li>
+        </ul>
       </section>
     </main>
 
