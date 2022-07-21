@@ -26,7 +26,7 @@
       main {
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
       }
 
       .timed-element {
@@ -77,6 +77,10 @@
           justify-content: space-between;
           gap: 0rem;
           margin: 0rem;
+        }
+
+        .section-entries a > h2:before {
+          background-image: url("/assets/images/code-solid.svg");
         }
       }
     </style>
@@ -169,7 +173,9 @@
           <!-- Deepflow -->
           <li>
             <div class="timed-element">
-              <h2>Deepflow</h2>
+              <a href="https://deep-flow.vercel.app/" target="_blank">
+                <h2 className="icon link-icon">Deepflow</h2>
+              </a>
               <span class="time-period"> 05/2022 - Present </span>
             </div>
             <h3>

@@ -9,7 +9,7 @@
 }
 
 * {
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: var(--text-color);
 
   transition: 150ms ease-in-out;
@@ -55,7 +55,7 @@ header {
 }
 
 #logo {
-  font-family: "Poppins Bold";
+  font-family: "Poppins Bold", Arial, Helvetica, sans-serif;
   font-size: x-large;
 }
 
@@ -131,6 +131,10 @@ footer > ul > li > *:hover {
   width: 12px;
   height: 12px;
   margin: 0px 5px;
+}
+
+.link-icon::before {
+  background-image: url("/assets/images/code-solid.svg");
 }
 
 .github-icon::before {
